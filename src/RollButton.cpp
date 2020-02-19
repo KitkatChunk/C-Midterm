@@ -5,7 +5,7 @@ RollButton::RollButton()
 	:Button(
 		"../Assets/textures/rollButton.png",
 		"rollButton",
-		ROLLBUTTON, glm::vec2(400, 300)), m_isClicked(false)
+		ROLLBUTTON, glm::vec2(300, 400)), m_isClicked(false)
 {
 }
 
@@ -19,12 +19,14 @@ bool RollButton::ButtonClick()
 	{
 		if (!m_isClicked)
 		{
-			int x = int(Util::RandomRange(1.0f,6.0f));
-			float h = rand();
-			
-			std::cout << "hi " << x << std::endl;
 
-			std::cout << "rand" << (h) << std::endl;
+			int x = int(Util::RandomRange(1.0f,6.0f));
+			int y = int(Util::RandomRange(1.0f, 6.0f));
+			
+			std::cout << x << std::endl;
+			std::cout << y << std::endl;
+
+		//	std::cout << "rand" << (h) << std::endl;
 			m_isClicked = true;
 		}
 		return true;

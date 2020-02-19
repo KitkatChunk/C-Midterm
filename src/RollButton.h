@@ -9,7 +9,7 @@ class RollButton : public Button
 public:
 	RollButton();
 	~RollButton();
-
+	
 
 	bool ButtonClick() override;
 private:

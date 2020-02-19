@@ -4,6 +4,10 @@
 
 #include "Scene.h"
 #include "RollButton.h"
+#include "DiceOneLabel.h"
+#include "DiceTwoLabel.h"
+#include "DiceOneImage.h"
+#include "DiceTwoImage.h"
 
 class Level1Scene : public Scene
 {
@@ -24,8 +28,10 @@ private:
 	// game objects
 
 	RollButton* m_pRollButton;
-
-
+	DiceOneLabel* m_pDiceOneLabel;
+	DiceTwoLabel* m_pDiceTwoLabel;
+	DiceOneImage* m_pDiceOneImage;
+	DiceTwoImage* m_pDiceTwoImage;
 	// private data member
 	glm::vec2 m_mousePosition;
 	

@@ -14,7 +14,10 @@ Level1Scene::~Level1Scene()
 void Level1Scene::draw()
 {
 	m_pRollButton->draw();
-
+	m_pDiceOneLabel->draw();
+	m_pDiceTwoLabel->draw();
+	m_pDiceOneImage->draw();
+	m_pDiceTwoImage->draw();
 
 }
 
@@ -125,8 +128,28 @@ void Level1Scene::handleEvents()
 
 void Level1Scene::start()
 {
+	SDL_Color blue = { 0, 0, 255, 255 };
+
 	m_pRollButton = new RollButton();
 	m_pRollButton->setMouseButtonClicked(false);
+
+
+	m_pDiceOneLabel = new DiceOneLabel("Dice One: ", "Consolas", 35, blue, glm::vec2(200.0f, 350.0f));
+	m_pDiceOneLabel->setParent(this);
+	addChild(m_pDiceOneLabel);
+
+
+	m_pDiceTwoLabel = new DiceTwoLabel("Dice Two: " , "Consolas", 35, blue, glm::vec2(450.0f, 350.0f));
+	m_pDiceTwoLabel->setParent(this);
+	addChild(m_pDiceTwoLabel);
+
+	m_pDiceOneImage = new DiceOneImage();
+	m_pDiceOneImage->setPosition(glm::vec2(100.0f, 100.0f));
+	addChild(m_pDiceOneImage);
+
+	m_pDiceTwoImage = new DiceTwoImage();
+	m_pDiceTwoImage->setPosition(glm::vec2(350.0f, 100.0f));
+	addChild(m_pDiceTwoImage);
 
 }
 
