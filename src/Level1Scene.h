@@ -8,7 +8,8 @@
 #include "DiceTwoLabel.h"
 #include "DiceOneImage.h"
 #include "DiceTwoImage.h"
-
+#include "Background.h"
+/*Abdulkarem Alani 300993768*/
 class Level1Scene : public Scene
 {
 public:
@@ -26,7 +27,7 @@ public:
 
 private:
 	// game objects
-
+	Background* m_pBackground;
 	RollButton* m_pRollButton;
 	DiceOneLabel* m_pDiceOneLabel;
 	DiceTwoLabel* m_pDiceTwoLabel;
@@ -35,7 +36,7 @@ private:
 	// private data member
 	glm::vec2 m_mousePosition;
 	
-	
+
 };
 
 #endif /* defined (__LEVEL_1_SCENE__) */

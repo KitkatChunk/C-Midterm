@@ -9,7 +9,10 @@ class RollButton : public Button
 public:
 	RollButton();
 	~RollButton();
-	
+
+	//public variables for dice
+	int a = 0;
+	int ab = 0;
 
 	bool ButtonClick() override;
 private:
